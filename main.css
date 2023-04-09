@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background: linear-gradient(180deg, #ff9a8b, #ff6a88);
+}
+
+.search {
+    position: relative;
+    height: 50px;
+}
+
+.search .input {
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    font-size: 18px;
+    padding: 15px;
+    height: 50px;
+    width: 15px;
+    transition: width 0.3s ease;
+}
+
+.seasearchrch .input::placeholder {
+    color: #fff;     
+}
+
+.btn {
+    background-color: #fff;
+    border: 0;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    transition: transfrom 0.3s ease;
+}
+
+.search .input:focus,
+.btn:focus {
+    outline: none;
+    user-select: none;
+}
+
+.search.active .input {
+    width: 200px;
+}
+
+.search.active .btn {
+    transform: translateX(198px);
+}
